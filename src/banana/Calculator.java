@@ -18,8 +18,11 @@ public class Calculator {
 			{
 				return Integer.parseInt(numberArrays.get(0));
 			}
-			result = Integer.parseInt(numberArrays.get(0)) +  Integer.parseInt(numberArrays.get(1)) ;
-			
+			else {
+				for (String number : numberArrays) {
+					result =  result +  Integer.parseInt(number) ;
+				}
+			}
 			
 			return result ;
 		}

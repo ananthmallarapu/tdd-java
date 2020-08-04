@@ -27,4 +27,16 @@ public class CalculatorTest {
 		int expected = calculator.add("1,2") ; 
 		assertEquals (3 ,expected) ; 
 	}
+	@Test
+	public void add_ThreeNumberCommaSeperated_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("1,2,3") ; 
+		assertEquals (6 ,expected) ; 
+	}
+	@Test
+	public void add_FourNumberCommaSeperated_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("1,2,3,4") ; 
+		assertEquals (10 ,expected) ; 
+	}
 }
