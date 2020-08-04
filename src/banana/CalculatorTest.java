@@ -79,4 +79,22 @@ public class CalculatorTest {
 		int expected = calculator.add("//:\n-1:-2") ; 
 		
 	}
+	@Test
+	public void add_VeryLargeNumber_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//:\n1001") ; 
+		assertEquals (0 ,expected) ; 
+	}
+	@Test
+	public void add_DelimiterOfAnyLength_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//;;;\n1;;;2;;;3") ; 
+		assertEquals (6 ,expected) ; 
+	}
+	@Test
+	public void add_MultipleDelimiter_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//;,;\n1;,;2;,;3") ; 
+		assertEquals (6 ,expected) ; 
+	}
 }
