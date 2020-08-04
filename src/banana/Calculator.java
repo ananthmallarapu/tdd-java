@@ -15,7 +15,16 @@ public class Calculator {
         		numbers = numbers.substring(delimiterIndex+1) ; 
         	}
         	
-        	
+        	if (numbers.contains("-")) {
+        		int index = numbers.indexOf("-");
+        		String negativeValues  = "" ;
+        		while (index >= 0) {
+        		    negativeValues =  negativeValues + "-" + numbers.charAt(index+1) +',' ;
+        		    index = numbers.indexOf("-", index+1);
+        		}
+        		        		throw new IllegalArgumentException("negatives not allowed .negative numbers are " + negativeValues  ) ;
+        						
+        		        	}
 			String delimiterRegex  = "\\s*"+ delimiterValue + "|\n" +"\\s*"; 
         	
         	List<String> numberArrays = Arrays.asList(numbers.split(delimiterRegex));

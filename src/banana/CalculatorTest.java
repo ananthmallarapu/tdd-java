@@ -61,19 +61,21 @@ public class CalculatorTest {
 	}
 	
 	@Rule 
-	public ExpectedException thrown = ExpectedException.none() ; 
+	public ExpectedException calculatorExceptionRule = ExpectedException.none() ; 
 	
 	@Test
 	public void add_OneNegativeNumber_ThrowsError() {
 		Calculator calculator = new Calculator() ; 
-		thrown.expect(IllegalArgumentException.class) ;
+		calculatorExceptionRule.expect(IllegalArgumentException.class) ;
+		calculatorExceptionRule.expectMessage("negatives not allowed .negative numbers are -1");
 		int expected = calculator.add("//;\n-1") ; 
 		
 	}
 	@Test
 	public void add_TwoNegativeNumbers_ThrowsError() {
 		Calculator calculator = new Calculator() ;
-		thrown.expect(IllegalArgumentException.class) ;
+		calculatorExceptionRule.expect(IllegalArgumentException.class) ;
+		calculatorExceptionRule.expectMessage("negatives not allowed .negative numbers are -1,-2");
 		int expected = calculator.add("//:\n-1:-2") ; 
 		
 	}
