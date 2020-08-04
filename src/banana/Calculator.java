@@ -6,9 +6,18 @@ import java.util.List;
 public class Calculator {
 
         public List <String> stringParser (String numbers ) {
-        	String delimiter = "\\s*,\\s*"; 
         	
-        	List<String> numberArrays = Arrays.asList(numbers.split(delimiter));
+        	String delimiterValue = "," ; 
+        	if (numbers.startsWith("//")) {
+        		
+        		int delimiterIndex = numbers.indexOf("\n") ; 
+        		delimiterValue = numbers.substring(0,delimiterIndex).replace("//","") ;
+        		numbers = numbers.substring(delimiterIndex+1) ; 
+        	}
+        	
+			String delimiterRegex  = "\\s*"+ delimiterValue + "|\n" +"\\s*"; 
+        	
+        	List<String> numberArrays = Arrays.asList(numbers.split(delimiterRegex));
         	
         	return numberArrays ;
         }

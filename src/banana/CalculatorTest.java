@@ -51,4 +51,10 @@ public class CalculatorTest {
 		int expected = calculator.add("//;\n1;2;3;4") ; 
 		assertEquals (10 ,expected) ; 
 	}
+	@Test
+	public void add_NumbersSeperatedByColon_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//:\n1:2:3:4") ; 
+		assertEquals (10 ,expected) ; 
+	}
 }
