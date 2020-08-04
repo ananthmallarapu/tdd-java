@@ -39,4 +39,16 @@ public class CalculatorTest {
 		int expected = calculator.add("1,2,3,4") ; 
 		assertEquals (10 ,expected) ; 
 	}
+	@Test
+	public void add_NumbersSeperatedByNewLine_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("1\n2,3\n4") ; 
+		assertEquals (10 ,expected) ; 
+	}
+	@Test
+	public void add_NumbersSeperatedByDifferentDelimiters_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//;\n1;2;3;4") ; 
+		assertEquals (10 ,expected) ; 
+	}
 }
