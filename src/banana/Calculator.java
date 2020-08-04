@@ -15,6 +15,7 @@ public class Calculator {
         		numbers = numbers.substring(delimiterIndex+1) ; 
         	}
         	
+        	
 			String delimiterRegex  = "\\s*"+ delimiterValue + "|\n" +"\\s*"; 
         	
         	List<String> numberArrays = Arrays.asList(numbers.split(delimiterRegex));

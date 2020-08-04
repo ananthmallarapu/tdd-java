@@ -2,7 +2,9 @@ package banana;
 
 import static org.junit.Assert.*;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 
 public class CalculatorTest {
@@ -56,5 +58,23 @@ public class CalculatorTest {
 		Calculator calculator = new Calculator() ; 
 		int expected = calculator.add("//:\n1:2:3:4") ; 
 		assertEquals (10 ,expected) ; 
+	}
+	
+	@Rule 
+	public ExpectedException thrown = ExpectedException.none() ; 
+	
+	@Test
+	public void add_OneNegativeNumber_ThrowsError() {
+		Calculator calculator = new Calculator() ; 
+		thrown.expect(IllegalArgumentException.class) ;
+		int expected = calculator.add("//;\n-1") ; 
+		
+	}
+	@Test
+	public void add_TwoNegativeNumbers_ThrowsError() {
+		Calculator calculator = new Calculator() ;
+		thrown.expect(IllegalArgumentException.class) ;
+		int expected = calculator.add("//:\n-1:-2") ; 
+		
 	}
 }
