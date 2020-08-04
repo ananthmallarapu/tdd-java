@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="StringCalculator" tests="14" started="14" failures="0" errors="0" ignored="0">
+  <testsuite name="banana.CalculatorTest" time="0.134">
+    <testcase name="add_OneVeryLargeNumberAndOneSmallNumber_ReturnSum" classname="banana.CalculatorTest" time="0.003"/>
+    <testcase name="add_DelimiterOfAnyLength_ReturnSum" classname="banana.CalculatorTest" time="0.0"/>
+    <testcase name="add_ThreeNumberCommaSeperated_ReturnSum" classname="banana.CalculatorTest" time="0.001"/>
+    <testcase name="add_NumbersSeperatedByNewLine_ReturnSum" classname="banana.CalculatorTest" time="0.001"/>
+    <testcase name="add_MultipleDelimiter_ReturnSum" classname="banana.CalculatorTest" time="0.0"/>
+    <testcase name="add_TwoNegativeNumbers_ThrowsError" classname="banana.CalculatorTest" time="0.106"/>
+    <testcase name="add_NumbersSeperatedByDifferentDelimiters_ReturnSum" classname="banana.CalculatorTest" time="0.001"/>
+    <testcase name="add_FourNumberCommaSeperated_ReturnSum" classname="banana.CalculatorTest" time="0.005"/>
+    <testcase name="add_EmptyString_ReturnZero" classname="banana.CalculatorTest" time="0.003"/>
+    <testcase name="add_OneVeryLargeNumber_ReturnSum" classname="banana.CalculatorTest" time="0.0"/>
+    <testcase name="add_SingleNumber_ReturnSameNumber" classname="banana.CalculatorTest" time="0.002"/>
+    <testcase name="add_NumbersSeperatedByColon_ReturnSum" classname="banana.CalculatorTest" time="0.008"/>
+    <testcase name="add_OneNegativeNumber_ThrowsError" classname="banana.CalculatorTest" time="0.002"/>
+    <testcase name="add_TwoNumberCommaSeperated_ReturnSum" classname="banana.CalculatorTest" time="0.002"/>
+  </testsuite>
+</testrun>
