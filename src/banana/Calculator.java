@@ -39,13 +39,19 @@ public class Calculator {
 			}
 			
 			List<String> numberArrays = stringParser (numbers) ;
-			if (numberArrays.size() == 1)
+			if (numberArrays.size() == 1  )
 			{
-				return Integer.parseInt(numberArrays.get(0));
+				if(Integer.parseInt(numberArrays.get(0)) < 1001) { 
+					return Integer.parseInt(numberArrays.get(0));
+				}
+				
 			}
 			else {
 				for (String number : numberArrays) {
-					result =  result +  Integer.parseInt(number) ;
+					if (Integer.parseInt(number) < 1001) {
+						result =  result +  Integer.parseInt(number) ;
+					}
+					
 				}
 			}
 			

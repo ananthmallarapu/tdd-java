@@ -80,10 +80,16 @@ public class CalculatorTest {
 		
 	}
 	@Test
-	public void add_VeryLargeNumber_ReturnSum() {
+	public void add_OneVeryLargeNumber_ReturnSum() {
 		Calculator calculator = new Calculator() ; 
 		int expected = calculator.add("//:\n1001") ; 
 		assertEquals (0 ,expected) ; 
+	}
+	@Test
+	public void add_OneVeryLargeNumberAndOneSmallNumber_ReturnSum() {
+		Calculator calculator = new Calculator() ; 
+		int expected = calculator.add("//:\n1001:2") ; 
+		assertEquals (2 ,expected) ; 
 	}
 	@Test
 	public void add_DelimiterOfAnyLength_ReturnSum() {
